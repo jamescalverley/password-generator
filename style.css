@@ -135,3 +135,10 @@ button[disabled] {
     font-size: 0.8rem;
   }
 }
+
+
+/* JC CSS */
+
+.inputs { 
+  margin: 50px 80px 50px 50px;
+}
