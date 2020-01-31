@@ -27,7 +27,7 @@
               <div class="form-group">
                 
                 <label for="exampleInputEmail1">Enter number of characters for password:</label>
-                <input type="number" class="form-control" id="charNeeded" aria-describedby="emailHelp" placeholder="characters">
+                <input type="number" class="form-control" id="charRequired" aria-describedby="emailHelp" placeholder="characters" onSubmit='return false'>
                 <small id="emailHelp" class="form-text text-muted">Number of characters must be between 8 and 128.</small>
 
               </div>
@@ -56,7 +56,7 @@
               
               </div>
 
-              <button type="submit" class="btn btn-primary" id="submitButton" onclick="getCharNum()">Submit</button>
+              <button type="submit" class="btn btn-primary" id="submitButton" onSubmit='return false'>Submit</button>
               
             </form>
 

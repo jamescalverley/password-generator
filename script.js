@@ -13,6 +13,47 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+// INPUTS 
+
+var charRequired = 0
+var lowerRequired = true;
+var upperRequired = true;
+var numbersRequired = true;
+var specialRequired = true;
+
+function getCharValue(){
+  charRequired = document.getElementById("charRequired").value
+  console.log(`Characters required: ${charRequired}`)
+} 
+
+submitButton.addEventListener("click", getCharValue);
+
+
+// check boxes
+
+if( document.querySelector('#lowerCase').checked){
+  lowerRequired = true}
+  else {
+    console.log("lowercase not required")
+}
+
+if( document.querySelector('#upperCase').checked){
+  upperRequired = true}
+  else {
+    console.log("uppercase not required")
+}
+
+if( document.querySelector('#numbers').checked){
+  numbersRequired = true}
+  else {
+    console.log("numbers not required")
+}
+
+if( document.querySelector('#specialChar').checked){
+  specialRequired = true}
+  else {
+    console.log("special characters not required")
+}
 
 
 var lowerString = "abcdefghijklmnopqrstuvwxyz";
@@ -20,12 +61,9 @@ var upperString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numberString = "0123456789";
 var specialString = "!@#$%^&*()_+";
 
-var charRequired = 10   //set this to input
+var charRequiredTest = 10   //set this to input
 
-var lowerRequired = true;
-var upperRequired = true;
-var numberRequired = true;
-var specialRequired = true;
+
 var blankString = "";
 var passwordString = "";
 
