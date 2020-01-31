@@ -142,3 +142,7 @@ button[disabled] {
 .inputs { 
   margin: 50px 80px 50px 50px;
 }
+
+.test {
+  margin: 100px 100px 100px 100px;
+}
