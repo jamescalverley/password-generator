@@ -1,4 +1,7 @@
 // Assignment Code
+
+// for check boxes use. document.querySelector('#checkboxID').checked
+
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
