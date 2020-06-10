@@ -24,7 +24,8 @@ var upperRequired = true;
 var numbersRequired = true;
 var specialRequired = true;
 
-function getCharValue(){
+function getCharValue(event){
+  event.preventDefault();
   charRequired = document.getElementById("charRequired").value
   console.log(`Characters required: ${charRequired}`)
 } 
@@ -33,6 +34,12 @@ submitButton.addEventListener("click", getCharValue);
 
 
 // check boxes
+
+if( document.getElementById("testCheck").checked){
+  console.log("test is checked")}
+  else {
+    console.log("test is NOT checked")
+  }
 
 if( document.querySelector('#lowerCase').checked){
   lowerRequired = true}
