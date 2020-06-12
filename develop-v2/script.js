@@ -19,14 +19,29 @@ function charactersNeeded(){
     } else {
         console.log(`Characters needed ${charNeeded}`);
     };
+};
 
-    
+function addCharacters( charNumber ){
+    console.log(`adding character... ${charNumber} needed`)
+    let add = lowerString[ charNumber ];
+    console.log(`Adding character: ${add}`)
+}
+
+let numArray = [];
+function randomNum(){
+    let num = Math.floor(Math.random()*50)
+    console.log(`Random number: ${num}`)
+    return num
 };
 
 
 function generatePass(){
     console.log("Generate btn clicked...")
     charactersNeeded();
+    randomNum();
+    addCharacters(3)
 };
 
 document.getElementById('generate').addEventListener('click', generatePass );
+
+
