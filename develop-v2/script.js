@@ -29,23 +29,29 @@ function charactersNeeded(){
     };
 };
 
-
-
 function generateCharSet(){
-    let needLower = false;
+    let needLower = true;
     let needUpper = true;
     let needNumber = true;
-    let needSpecial = false;
-    let workingSet = "";
+    let needSpecial = true;
+    let charSet = "";
 
-    if( set == 1 ){
-        charSet = strcat( placeholder,lowerString )
-        return charSet
-    } else if ( set == 2 ){
-        let charSet = workingSet.concat(upperString);
-        console.log("adding UPPER to characters", charSet)
-        return charSet
-    }
+    if( needLower == true ){
+        console.log("lowercase is needed")
+        charSet += lowerString;
+    }if( needUpper == true ){
+        console.log("uppercase is needed")
+        charSet += upperString;
+    } if( needNumber == true ){
+        console.log("numbers are needed")
+        charSet += numberString;        
+    } if( needSpecial == true ){
+        console.log("special char needed")
+        charSet += specialString;   
+    };
+
+    console.log("working set", charSet)
+    return charSet
 };
 
 function generatePassword( charNeeded, charSet ){
