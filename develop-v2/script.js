@@ -8,13 +8,14 @@
 // adding characters x number of times
 // each time adding a random character (index must be between 0 and string.length)
 
+
+
+let newPassword = "";
+let passArray = [];
 const lowerString = "abcdefghijklmnopqrstuvwxyz";
 const upperString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const numberString = "0123456789";
 const specialString = "!@#$%^&*()_+";
-
-let newPassword = "";
-let passArray = [];
 
 function charactersNeeded(){
     let charNeeded = document.getElementById('charNeeded').value;
@@ -28,12 +29,32 @@ function charactersNeeded(){
     };
 };
 
-function addCharacters( charNeeded ){
-    console.log(`adding character... ${charNeeded} needed`)
+
+
+function generateCharSet(){
+    let needLower = false;
+    let needUpper = true;
+    let needNumber = true;
+    let needSpecial = false;
+    let workingSet = "";
+
+    if( set == 1 ){
+        charSet = strcat( placeholder,lowerString )
+        return charSet
+    } else if ( set == 2 ){
+        let charSet = workingSet.concat(upperString);
+        console.log("adding UPPER to characters", charSet)
+        return charSet
+    }
+};
+
+function generatePassword( charNeeded, charSet ){
+    let characters = charSet;
+    console.log('[generatePassword]', characters)
     
     let count = 0;
     while (count < charNeeded){
-        passArray.push(lowerString[1])
+        passArray.push(characters[1])
         count ++
     };
     console.log(`test array: ${passArray}`)
@@ -52,14 +73,14 @@ function randomNum(){
 };
 
 
-function generatePass(){
+function handleClick(){
     console.log("Generate btn clicked...")
     charactersNeeded();
     randomNum();
-    addCharacters( charactersNeeded() );
+    generatePassword( charactersNeeded(), generateCharSet() );
 };
 
-document.getElementById('generate').addEventListener('click', generatePass );
+document.getElementById('generate').addEventListener('click', handleClick );
 
 
 
