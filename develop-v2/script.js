@@ -35,7 +35,6 @@ function generateCharSet(){
     let needNumber = true;
     let needSpecial = true;
     let charSet = "";
-
     if( needLower == true ){
         console.log("lowercase is needed")
         charSet += lowerString;
@@ -56,11 +55,16 @@ function generateCharSet(){
 
 function generatePassword( charNeeded, charSet ){
     let characters = charSet;
-    console.log('[generatePassword]', characters)
+    console.log('[generatePassword] using characters >>', characters);
+
+    let setLength = characters.length;
+    console.log("charSet length:::", setLength);
+
     
     let count = 0;
     while (count < charNeeded){
-        passArray.push(characters[1])
+        let index = Math.floor(Math.random() * setLength)
+        passArray.push(characters[index])
         count ++
     };
     console.log(`test array: ${passArray}`)
@@ -68,21 +72,14 @@ function generatePassword( charNeeded, charSet ){
     console.log(`converted to string: ${newPassword}`)
     
     return newPassword
-    
 }
 
-let numArray = [];
-function randomNum(){
-    let num = Math.floor(Math.random()*50)
-    console.log(`Random number: ${num}`)
-    return num
-};
+
 
 
 function handleClick(){
     console.log("Generate btn clicked...")
-    charactersNeeded();
-    randomNum();
+    //charactersNeeded();
     generatePassword( charactersNeeded(), generateCharSet() );
 };
 
