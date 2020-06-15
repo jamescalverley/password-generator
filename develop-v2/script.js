@@ -31,6 +31,7 @@ let lowerCheck = document.getElementById('lowerCheck');
 let upperCheck = document.getElementById('upperCheck');
 let numbersCheck = document.getElementById('numbersCheck');
 let specialCheck = document.getElementById('specialCheck');
+let newPasswordDisplay = document.getElementById('new-password-display');
 
 function charactersNeeded(){
     let charNeeded = document.getElementById('charNeeded').value;
@@ -85,7 +86,6 @@ function generatePassword( charNeeded, charSet ){
     let setLength = characters.length;
     console.log("charSet length:::", setLength);
 
-    
     let count = 0;
     while (count < charNeeded){
         let index = Math.floor(Math.random() * setLength)
@@ -95,20 +95,13 @@ function generatePassword( charNeeded, charSet ){
     console.log(`test array: ${passArray}`)
     newPassword = passArray.join('');
     console.log(`converted to string: ${newPassword}`)
+
+    newPasswordDisplay.innerHTML = newPassword;
+
+
     
     return newPassword
-}
-
-function errorHandle(){
-    if( 
-        !lowerCheck.checked && 
-        !upperCheck.checked && 
-        !numbersCheck.checked && 
-        !specialCheck.checked ){
-        alert("At least one character set must be selected!")
-    };
-}
-
+};
 
 function handleClick(){
     console.log("Generate btn clicked...")
