@@ -9,8 +9,8 @@
 // each time adding a random character (index must be between 0 and string.length)
 
 //! Todo's
-// add checkboxes
-// change generateCharSet function to take charNeeded from checkboxes
+//* COMPLETE add checkboxes
+//* COMPLETE change generateCharSet function to take charNeeded from checkboxes
 // display new password somewhere
 
 
@@ -109,21 +109,7 @@ function handleClick(){
 document.getElementById('generate').addEventListener('click', handleClick );
 
 
-let testCheck = true;
 
-document.getElementById('testCheck').addEventListener('change', function(){
-    if(this.checked){
-        testCheck = true;
-        console.log(`TEST checkbox... CHECKED -- ${testCheck}`)
-        
-    } else {
-        testCheck = false;
-        console.log(`TEST checkbox... UNCHECKED -- ${testCheck}`)
-        
-    }
-})
-
-const checkboxContainer = document.getElementById('checkbox-container');
 
 
 
