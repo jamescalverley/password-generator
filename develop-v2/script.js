@@ -22,6 +22,16 @@ const upperString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const numberString = "0123456789";
 const specialString = "!@#$%^&*()_+";
 
+let needLower = true;
+let needUpper = false;
+let needNumbers = false;
+let needSpecial = false;
+
+let lowerCheck = document.getElementById('lowerCheck');
+let upperCheck = document.getElementById('upperCheck');
+let numbersCheck = document.getElementById('numbersCheck');
+let specialCheck = document.getElementById('specialCheck');
+
 function charactersNeeded(){
     let charNeeded = document.getElementById('charNeeded').value;
     if( charNeeded < 8 ){
@@ -35,25 +45,36 @@ function charactersNeeded(){
 };
 
 function generateCharSet(){
-    let needLower = true;
-    let needUpper = true;
-    let needNumber = true;
-    let needSpecial = true;
     let charSet = "";
-    if( needLower == true ){
-        console.log("lowercase is needed")
+    if( lowerCheck.checked ){
+        needLower = true;
         charSet += lowerString;
-    }if( needUpper == true ){
-        console.log("uppercase is needed")
-        charSet += upperString;
-    } if( needNumber == true ){
-        console.log("numbers are needed")
-        charSet += numberString;        
-    } if( needSpecial == true ){
-        console.log("special char needed")
-        charSet += specialString;   
+        console.log("+++Lower case needed");
+    } else {
+        needLower = false;
     };
-
+    if( upperCheck.checked){
+        needUpper = true;
+        charSet += upperString;
+        console.log("+++Upper case needed")
+    } else {
+        needUpper = false;
+    };
+    if( numbersCheck.checked ){
+        needNumbers = true;
+        charSet += numberString;
+        console.log("+++Numbers needed")
+    } else {
+        needNumbers = false;
+    };
+    if( specialCheck.checked ){
+        needSpecial = true;
+        charSet += specialString;
+        console.log("+++Special characters needed")
+    } else {
+        needSpecial = false;
+    };
+    
     console.log("working set", charSet)
     return charSet
 };
@@ -88,15 +109,21 @@ function handleClick(){
 document.getElementById('generate').addEventListener('click', handleClick );
 
 
-let testCheck = document.getElementById('testCheck');
+let testCheck = true;
 
-testCheck.addEventListener('change', function(){
+document.getElementById('testCheck').addEventListener('change', function(){
     if(this.checked){
-        console.log("TEST checkbox... CHECKED")
+        testCheck = true;
+        console.log(`TEST checkbox... CHECKED -- ${testCheck}`)
+        
     } else {
-        console.log("TEST checkbox...UNCHECKED")
+        testCheck = false;
+        console.log(`TEST checkbox... UNCHECKED -- ${testCheck}`)
+        
     }
 })
+
+const checkboxContainer = document.getElementById('checkbox-container');
 
 
 
