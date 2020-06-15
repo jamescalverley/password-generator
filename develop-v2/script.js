@@ -8,6 +8,11 @@
 // adding characters x number of times
 // each time adding a random character (index must be between 0 and string.length)
 
+//! Todo's
+// add checkboxes
+// change generateCharSet function to take charNeeded from checkboxes
+// display new password somewhere
+
 
 
 let newPassword = "";
@@ -56,7 +61,6 @@ function generateCharSet(){
 function generatePassword( charNeeded, charSet ){
     let characters = charSet;
     console.log('[generatePassword] using characters >>', characters);
-
     let setLength = characters.length;
     console.log("charSet length:::", setLength);
 
@@ -75,8 +79,6 @@ function generatePassword( charNeeded, charSet ){
 }
 
 
-
-
 function handleClick(){
     console.log("Generate btn clicked...")
     //charactersNeeded();
@@ -84,6 +86,17 @@ function handleClick(){
 };
 
 document.getElementById('generate').addEventListener('click', handleClick );
+
+
+let testCheck = document.getElementById('testCheck');
+
+testCheck.addEventListener('change', function(){
+    if(this.checked){
+        console.log("TEST checkbox... CHECKED")
+    } else {
+        console.log("TEST checkbox...UNCHECKED")
+    }
+})
 
 
 
