@@ -1,0 +1,15 @@
+{
+  "name": "develop-v2",
+  "version": "1.0.0",
+  "description": "Create an application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.",
+  "main": "script.js",
+  "dependencies": {
+    "@material/slider": "^6.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
