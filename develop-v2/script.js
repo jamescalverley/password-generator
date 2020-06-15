@@ -99,14 +99,34 @@ function generatePassword( charNeeded, charSet ){
     return newPassword
 }
 
+function errorHandle(){
+    if( 
+        !lowerCheck.checked && 
+        !upperCheck.checked && 
+        !numbersCheck.checked && 
+        !specialCheck.checked ){
+        alert("At least one character set must be selected!")
+    };
+}
+
 
 function handleClick(){
     console.log("Generate btn clicked...")
-    //charactersNeeded();
+    if( 
+        !lowerCheck.checked && 
+        !upperCheck.checked && 
+        !numbersCheck.checked && 
+        !specialCheck.checked ){
+        alert("At least one character set must be selected!")
+    return 
+} else {
     generatePassword( charactersNeeded(), generateCharSet() );
+};  
 };
 
 document.getElementById('generate').addEventListener('click', handleClick );
+
+
 
 
 
