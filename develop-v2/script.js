@@ -1,17 +1,10 @@
-// add lists of #, a, b, c
-// add math random function
-// add function to add desired number of characters to password string
-// add alerts if charNeeded is below 8 or over 128
-
-
-
-// adding characters x number of times
-// each time adding a random character (index must be between 0 and string.length)
 
 //! Todo's
 //* COMPLETE add checkboxes
 //* COMPLETE change generateCharSet function to take charNeeded from checkboxes
-// display new password somewhere
+//* COMPLETE display new password somewhere
+// add slider for required characters
+// add reset function for slider and checkboxes
 
 
 
@@ -98,8 +91,6 @@ function generatePassword( charNeeded, charSet ){
 
     newPasswordDisplay.innerHTML = newPassword;
 
-
-    
     return newPassword
 };
 
@@ -112,9 +103,9 @@ function handleClick(){
         !specialCheck.checked ){
         alert("At least one character set must be selected!")
     return 
-} else {
-    generatePassword( charactersNeeded(), generateCharSet() );
-};  
+    } else {
+        generatePassword( charactersNeeded(), generateCharSet() );
+    };  
 };
 
 document.getElementById('generate').addEventListener('click', handleClick );

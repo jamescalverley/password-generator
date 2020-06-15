@@ -1,26 +1,18 @@
-
-
 body {
     text-align: center;
     width: 100%;
-    
-    
     padding: 60px;
 }
-
 .card {
     min-width: 50%;
     max-width: 500px;
     display: inline-block;
     margin: 0% 25% 0% 25%;
 }
-
-
 .new-password {
     margin-top: 20px;
     min-height: 80px;
 }
-
 #new-password-display {
     min-height: 80px;
     font-size: larger;
