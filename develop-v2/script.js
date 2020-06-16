@@ -3,7 +3,7 @@
 //* COMPLETE add checkboxes
 //* COMPLETE change generateCharSet function to take charNeeded from checkboxes
 //* COMPLETE display new password somewhere
-// add slider for required characters
+//* add slider for required characters
 // add reset function for slider and checkboxes
 
 
@@ -24,19 +24,29 @@ let lowerCheck = document.getElementById('lowerCheck');
 let upperCheck = document.getElementById('upperCheck');
 let numbersCheck = document.getElementById('numbersCheck');
 let specialCheck = document.getElementById('specialCheck');
+let slider = document.getElementById('charNeededSlider');
+let charDisplay = document.getElementById('charDisplay');
 let newPasswordDisplay = document.getElementById('new-password-display');
 
-function charactersNeeded(){
-    let charNeeded = document.getElementById('charNeeded').value;
-    if( charNeeded < 8 ){
-        console.log("ADD ALERT: charNeeded below 8")
-    } else if( charNeeded > 128){
-        console.log("ADD ALERT: charNeeded above 128")
-    } else {
-        console.log(`Characters needed ${charNeeded}`);
-    return charNeeded
-    };
-};
+console.log(`Slider value: ${slider.value}`)
+slider.addEventListener('change', function(event){
+    console.log(`the slider value has changed ${event.target.value}`)
+    charDisplay.innerHTML = slider.value;
+});
+
+charDisplay.innerHTML = slider.value;
+
+// function charactersNeeded(){
+//     let charNeeded = document.getElementById('charNeeded').value;
+//     if( charNeeded < 8 ){
+//         console.log("ADD ALERT: charNeeded below 8")
+//     } else if( charNeeded > 128){
+//         console.log("ADD ALERT: charNeeded above 128")
+//     } else {
+//         console.log(`Characters needed ${charNeeded}`);
+//     return charNeeded
+//     };
+// };
 
 function generateCharSet(){
     let charSet = "";
@@ -88,6 +98,7 @@ function generatePassword( charNeeded, charSet ){
     console.log(`test array: ${passArray}`)
     newPassword = passArray.join('');
     console.log(`converted to string: ${newPassword}`)
+    console.log(`characters needed = ${charNeeded}`)
 
     newPasswordDisplay.innerHTML = newPassword;
 
@@ -104,7 +115,8 @@ function handleClick(){
         alert("At least one character set must be selected!")
     return 
     } else {
-        generatePassword( charactersNeeded(), generateCharSet() );
+        //generatePassword( charactersNeeded(), generateCharSet() );
+        generatePassword( slider.value, generateCharSet() );
     };  
 };
 
