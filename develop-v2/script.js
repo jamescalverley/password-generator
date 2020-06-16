@@ -18,10 +18,12 @@ const upperString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const numberString = "0123456789";
 const specialString = "!@#$%^&*()_+";
 
-let needLower = true;
-let needUpper = false;
-let needNumbers = false;
-let needSpecial = false;
+let reqChar = {
+    lower: true, 
+    upper: false, 
+    numbers: false, 
+    special: false
+};
 
 let lowerCheck = document.getElementById('lowerCheck');
 let upperCheck = document.getElementById('upperCheck');
@@ -54,34 +56,33 @@ charDisplay.innerHTML = slider.value;
 function generateCharSet(){
     let charSet = "";
     if( lowerCheck.checked ){
-        needLower = true;
+        reqChar.lower = true;
         charSet += lowerString;
         console.log("+++Lower case needed");
     } else {
-        needLower = false;
+        reqChar.lower = false;
     };
     if( upperCheck.checked){
-        needUpper = true;
+        reqChar.upper = true;
         charSet += upperString;
         console.log("+++Upper case needed")
     } else {
-        needUpper = false;
+        reqChar.upper = false;
     };
     if( numbersCheck.checked ){
-        needNumbers = true;
+        reqChar.numbers = true;
         charSet += numberString;
         console.log("+++Numbers needed")
     } else {
-        needNumbers = false;
+        reqChar.numbers = false;
     };
     if( specialCheck.checked ){
-        needSpecial = true;
+        reqChar.special = true;
         charSet += specialString;
         console.log("+++Special characters needed")
     } else {
-        needSpecial = false;
+        reqChar.special = false;
     };
-    
     console.log("working set", charSet)
     return charSet
 };
