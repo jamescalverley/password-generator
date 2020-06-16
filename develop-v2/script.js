@@ -5,6 +5,9 @@
 //* COMPLETE display new password somewhere
 //* add slider for required characters
 // add reset function for slider and checkboxes
+// display character required
+// add copy button
+// clean up code
 
 
 
