@@ -9,6 +9,8 @@
 // add copy button
 // clean up code
 
+// look at window objects
+
 
 
 let newPassword = "";
