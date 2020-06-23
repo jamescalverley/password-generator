@@ -96,6 +96,10 @@ function generatePassword( charNeeded, charSet ){
     console.log("charSet length:::", setLength);
 
     let count = 0;
+    if(passArray.length > 0 ) {
+        console.log("** passArray length is greater than zero")
+        passArray = []
+    };
     while (count < charNeeded){
         let index = Math.floor(Math.random() * setLength)
         passArray.push(characters[index])
@@ -121,10 +125,17 @@ function handleClick(){
         alert("At least one character set must be selected!")
     return 
     } else {
-        //generatePassword( charactersNeeded(), generateCharSet() );
         generatePassword( slider.value, generateCharSet() );
     };  
 };
+
+function reset(){
+    console.log("resetting display div")
+
+
+};
+
+
 
 document.getElementById('generate').addEventListener('click', handleClick );
 

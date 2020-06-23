@@ -26,8 +26,8 @@ var specialRequired = true;
 
 function getCharValue(event){
   event.preventDefault();
-  charRequired = document.getElementById("charRequired").value
-  console.log(`Characters required: ${charRequired}`)
+  charRequired = document.getElementById("charRequired").value;
+  console.log(`Characters required: ${charRequired}`);
 } 
 
 submitButton.addEventListener("click", getCharValue);
