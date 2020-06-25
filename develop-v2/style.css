@@ -2,19 +2,38 @@ body {
     text-align: center;
     width: 100%;
     height: 100vh;
-    padding: 60px;
+    padding: 120px 60px 60px 60px;
 }
 
 .pass-container {
-    background-color: bisque;
     min-width: 50%;
-    max-width: 500px;
+    max-width: 400px;
+    height: 500px;
+    border-radius: 20px;
     display: inline-block;
-    /* margin: 0% 25% 0% 25%; */
     position: absolute;
     left: 50%;
     transform: translate( -50%);
+    padding: 40px;
+    box-shadow: 1px 1px 3px 3px grey;
 }
+.pass-header {
+    background-color: honeydew;
+    font-size: 2em;
+    height: 20%;
+
+}
+.pass-body {
+    background-color: chocolate;
+    font-size: 1em;
+    height: 70%;
+    /* margin: 40px 0px 40px 0px; */
+}
+.pass-footer {
+    background-color: lavender;
+    height: 10%
+}
+
 
 
 
