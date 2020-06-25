@@ -57,28 +57,28 @@ charDisplay.innerHTML = slider.value;
 
 function generateCharSet(){
     let charSet = "";
-    if( lowerCheck.checked ){
+    if( lowerCheck.checked ) {
         reqChar.lower = true;
         charSet += lowerString;
         console.log("+++Lower case needed");
     } else {
         reqChar.lower = false;
     };
-    if( upperCheck.checked){
+    if( upperCheck.checked ) {
         reqChar.upper = true;
         charSet += upperString;
         console.log("+++Upper case needed")
     } else {
         reqChar.upper = false;
     };
-    if( numbersCheck.checked ){
+    if( numbersCheck.checked ) {
         reqChar.numbers = true;
         charSet += numberString;
         console.log("+++Numbers needed")
     } else {
         reqChar.numbers = false;
     };
-    if( specialCheck.checked ){
+    if( specialCheck.checked ) {
         reqChar.special = true;
         charSet += specialString;
         console.log("+++Special characters needed")
@@ -96,11 +96,10 @@ function generatePassword( charNeeded, charSet ){
     console.log("charSet length:::", setLength);
 
     let count = 0;
-    if(passArray.length > 0 ) {
-        console.log("** passArray length is greater than zero")
+    if( passArray.length > 0 ) {
         passArray = []
     };
-    while (count < charNeeded){
+    while (count < charNeeded) {
         let index = Math.floor(Math.random() * setLength)
         passArray.push(characters[index])
         count ++
