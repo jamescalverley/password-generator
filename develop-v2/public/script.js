@@ -94,7 +94,6 @@ function generatePassword( charNeeded, charSet ){
     console.log('[generatePassword] using characters >>', characters);
     let setLength = characters.length;
     console.log("charSet length:::", setLength);
-
     let count = 0;
     if(passArray.length > 0 ) {
         console.log("** passArray length is greater than zero")
@@ -128,14 +127,6 @@ function handleClick(){
         generatePassword( slider.value, generateCharSet() );
     };  
 };
-
-function reset(){
-    console.log("resetting display div")
-
-
-};
-
-
 
 document.getElementById('generate').addEventListener('click', handleClick );
 
