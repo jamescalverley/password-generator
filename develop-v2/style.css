@@ -21,7 +21,6 @@ body {
     background-color: honeydew;
     font-size: 2em;
     height: 20%;
-
 }
 .pass-body {
     background-color: chocolate;
@@ -34,6 +33,37 @@ body {
     height: 10%
 }
 
+.checkmark {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: seagreen;
+    color: rgb(214, 104, 25);
+}
+
+.form-check {
+    margin-bottom: 10px;
+}
+.form-check-input {
+    height: 30px;
+    width: 30px;
+}
+.form-check input:checked ~ .checkbox {
+    background-color: salmon;
+}
+
+.form-check-label::after{
+    background-color: salmon;
+
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
 
 
 

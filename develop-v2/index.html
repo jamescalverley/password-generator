@@ -16,10 +16,47 @@
         </div>
         <div class="pass-body">
           Body
+          <div class="slider-container">
+            <label for="charNeeded">Characters needed</label>
+            <input type="range" min="8" max="128" value="8" class="slider" id="charNeededSlider">
+            <div id="charDisplay"></div>
+          </div>
+          <div id="checkbox-container">
+
+              <div class="checkbox-wrapper">
+                <input type="checkbox" class="checkmark" id="check" >
+                <label for="check">TEST CHECK</label>
+
+
+              </div>
+              <div class="checkbox-wrapper">
+                <input type="checkbox" class="checkmark" id="check" >
+                <label for="check">TEST</label>
+              </div>
+
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="lowerCheck" checked>
+                <label class="form-check-label" for="lowerCheck">Lowercase</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="upperCheck">
+                <label class="form-check-label" for="upperCheck">Uppercase</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="numbersCheck">
+                <label class="form-check-label" for="numbersCheck">Numbers</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="specialCheck">
+                <label class="form-check-label" for="specialCheck">Special Chararcters</label>
+              </div>
+            </div>
         </div>
+        
         <div class="pass-footer">
           <button id="btnGen" class="btn btn-outline-secondary">GENERATE</button>
         </div>
+
       </div>
 
     </div>
