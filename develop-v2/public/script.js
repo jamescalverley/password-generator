@@ -35,9 +35,8 @@ let slider = document.getElementById('charNeededSlider');
 let charDisplay = document.getElementById('charDisplay');
 let newPasswordDisplay = document.getElementById('new-password-display');
 
-console.log(`Slider value: ${slider.value}`)
+
 slider.addEventListener('change', function(event){
-    console.log(`the slider value has changed ${event.target.value}`)
     charDisplay.innerHTML = slider.value;
 });
 
@@ -60,40 +59,33 @@ function generateCharSet(){
     if( lowerCheck.checked ){
         reqChar.lower = true;
         charSet += lowerString;
-        console.log("+++Lower case needed");
     } else {
         reqChar.lower = false;
     };
     if( upperCheck.checked){
         reqChar.upper = true;
         charSet += upperString;
-        console.log("+++Upper case needed")
     } else {
         reqChar.upper = false;
     };
     if( numbersCheck.checked ){
         reqChar.numbers = true;
         charSet += numberString;
-        console.log("+++Numbers needed")
     } else {
         reqChar.numbers = false;
     };
     if( specialCheck.checked ){
         reqChar.special = true;
         charSet += specialString;
-        console.log("+++Special characters needed")
     } else {
         reqChar.special = false;
     };
-    console.log("working set", charSet)
     return charSet
 };
 
 function generatePassword( charNeeded, charSet ){
     let characters = charSet;
-    console.log('[generatePassword] using characters >>', characters);
     let setLength = characters.length;
-    console.log("charSet length:::", setLength);
     let count = 0;
     if(passArray.length > 0 ) {
         console.log("** passArray length is greater than zero")
@@ -104,18 +96,12 @@ function generatePassword( charNeeded, charSet ){
         passArray.push(characters[index])
         count ++
     };
-    console.log(`test array: ${passArray}`)
     newPassword = passArray.join('');
-    console.log(`converted to string: ${newPassword}`)
-    console.log(`characters needed = ${charNeeded}`)
-
     newPasswordDisplay.innerHTML = newPassword;
-
     return newPassword
 };
 
 function handleClick(){
-    console.log("Generate btn clicked...")
     if( 
         !lowerCheck.checked && 
         !upperCheck.checked && 

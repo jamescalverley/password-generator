@@ -12,12 +12,20 @@ body {
     min-width: 50%;
     max-width: 500px;
     display: inline-block;
-    /* margin: 0% 25% 0% 25%; */
     position: absolute;
     left: 50%;
     transform: translate( -50%);
 
 }
+.form-check-input {
+    color: red;
+}
+
+
+
+
+
+
 .new-password {
     margin-top: 20px;
     min-height: 80px;
