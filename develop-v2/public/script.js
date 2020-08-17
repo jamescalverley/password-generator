@@ -88,7 +88,6 @@ function generatePassword( charNeeded, charSet ){
     let setLength = characters.length;
     let count = 0;
     if(passArray.length > 0 ) {
-        console.log("** passArray length is greater than zero")
         passArray = []
     };
     while (count < charNeeded){
@@ -114,7 +113,18 @@ function handleClick(){
     };  
 };
 
+function copyPassword(){
+    console.log("copying password")
+    const copyText = document.getElementById('new-password-display');
+    console.log(`Copying: ${copyText.value}`)
+    copyText.select();
+    copyText.setSelectionRange(0,9999);
+    document.execCommand("copy");
+};
+
 document.getElementById('generate').addEventListener('click', handleClick );
+
+document.getElementById('copy').addEventListener('click', copyPassword );
 
 
 
