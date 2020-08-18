@@ -15,7 +15,7 @@
     <div class="wrapper">
         <div class="card">
           <div class="card-header">
-            <h2>Generate a Password (Slider)</h2>
+            <h2>Password Generator</h2>
           </div>
           
           <div class="card-body">
@@ -52,9 +52,14 @@
           </div>
         </div>
         <div class="card new-password">
-          <textarea type="text" class="card-header" id="new-password-display">
+          <div type="text" class="card-header" id="new-password-display">
             
-          </textarea>
+          </div>
+          <div class="textarea-hidden">
+            <textarea type="text" id="password-copy">
+            </textarea>
+          </div>
+          
           <button id="copy" class="btn btn-sm btn-secondary">copy</button>
         </div>
       </div>

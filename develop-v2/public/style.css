@@ -37,6 +37,13 @@ body {
     padding-top: 10px;
 }
 
+
+.textarea-hidden {
+    height: 0px;
+    width: 0px;
+    opacity: 0;
+}
+
 @media screen and (max-width: 600px){
     body {
         padding: 40px 20px 20px 20px;

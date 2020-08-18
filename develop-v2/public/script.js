@@ -34,6 +34,7 @@ let specialCheck = document.getElementById('specialCheck');
 let slider = document.getElementById('charNeededSlider');
 let charDisplay = document.getElementById('charDisplay');
 let newPasswordDisplay = document.getElementById('new-password-display');
+let passwordCopy = document.getElementById('password-copy');
 
 
 slider.addEventListener('change', function(event){
@@ -97,6 +98,7 @@ function generatePassword( charNeeded, charSet ){
     };
     newPassword = passArray.join('');
     newPasswordDisplay.innerHTML = newPassword;
+    passwordCopy.innerHTML = newPassword;
     return newPassword
 };
 
@@ -115,7 +117,7 @@ function handleClick(){
 
 function copyPassword(){
     console.log("copying password")
-    const copyText = document.getElementById('new-password-display');
+    const copyText = document.getElementById('password-copy');
     console.log(`Copying: ${copyText.value}`)
     copyText.select();
     copyText.setSelectionRange(0,9999);
