@@ -33,6 +33,7 @@ let numbersCheck = document.getElementById('numbersCheck');
 let specialCheck = document.getElementById('specialCheck');
 let slider = document.getElementById('charNeededSlider');
 let charDisplay = document.getElementById('charDisplay');
+let newPasswordContainer = document.querySelector('.new-password');
 let newPasswordDisplay = document.getElementById('new-password-display');
 let passwordCopy = document.getElementById('password-copy');
 
@@ -97,6 +98,7 @@ function generatePassword( charNeeded, charSet ){
         count ++
     };
     newPassword = passArray.join('');
+    newPasswordContainer.style.visibility = 'visible';
     newPasswordDisplay.innerHTML = newPassword;
     passwordCopy.innerHTML = newPassword;
     return newPassword
@@ -122,11 +124,24 @@ function copyPassword(){
     copyText.select();
     copyText.setSelectionRange(0,9999);
     document.execCommand("copy");
+    displayAlert();
+};
+
+//! tie button that is triggering the alert to the function
+function displayAlert(){
+    $(".alert").show();
+    setTimeout( () => $(".alert").hide(), 3000)
 };
 
 document.getElementById('generate').addEventListener('click', handleClick );
 
 document.getElementById('copy').addEventListener('click', copyPassword );
+
+newPasswordContainer.style.visibility = 'hidden';
+
+
+
+
 
 
 

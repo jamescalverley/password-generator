@@ -21,11 +21,6 @@ body {
     color: red;
 }
 
-
-
-
-
-
 .new-password {
     margin-top: 20px;
     min-height: 80px;
@@ -42,6 +37,13 @@ body {
     height: 0px;
     width: 0px;
     opacity: 0;
+}
+.alert {
+    min-width: 50%;
+    max-width: 500px;
+    left: 50%;
+    transform: translate( -50%);
+    margin-top: 10px;
 }
 
 @media screen and (max-width: 600px){
