@@ -4,7 +4,6 @@ body {
     height: 100vh;
     padding: 60px;
 }
-
 .card {
     min-width: 50%;
     max-width: 500px;
@@ -16,11 +15,9 @@ body {
 #charDisplay {
     font-size: 24px;
 }
-
 #checkbox-container {
     margin-top: 20px;
 }
-
 .form-check-input {
     color: red;
 }
@@ -34,7 +31,6 @@ body {
     text-align: center;
     padding-top: 10px;
 }
-
 .textarea-hidden {
     height: 0px;
     width: 0px;

@@ -1,18 +1,4 @@
 
-//! Todo's
-//* COMPLETE add checkboxes
-//* COMPLETE change generateCharSet function to take charNeeded from checkboxes
-//* COMPLETE display new password somewhere
-//* add slider for required characters
-// add reset function for slider and checkboxes
-// display character required
-// add copy button
-// clean up code
-
-// look at window objects
-
-
-
 let newPassword = "";
 let passArray = [];
 const lowerString = "abcdefghijklmnopqrstuvwxyz";
@@ -20,22 +6,22 @@ const upperString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const numberString = "0123456789";
 const specialString = "!@#$%^&*()_+";
 
-let reqChar = {
+const reqChar = {
     lower: true, 
     upper: false, 
     numbers: false, 
     special: false
 };
 
-let lowerCheck = document.getElementById('lowerCheck');
-let upperCheck = document.getElementById('upperCheck');
-let numbersCheck = document.getElementById('numbersCheck');
-let specialCheck = document.getElementById('specialCheck');
-let slider = document.getElementById('charNeededSlider');
-let charDisplay = document.getElementById('charDisplay');
-let newPasswordContainer = document.querySelector('.new-password');
-let newPasswordDisplay = document.getElementById('new-password-display');
-let passwordCopy = document.getElementById('password-copy');
+const lowerCheck = document.getElementById('lowerCheck');
+const upperCheck = document.getElementById('upperCheck');
+const numbersCheck = document.getElementById('numbersCheck');
+const specialCheck = document.getElementById('specialCheck');
+const slider = document.getElementById('charNeededSlider');
+const charDisplay = document.getElementById('charDisplay');
+const newPasswordContainer = document.querySelector('.new-password');
+const newPasswordDisplay = document.getElementById('new-password-display');
+const passwordCopy = document.getElementById('password-copy');
 
 
 slider.addEventListener('change', function(event){
@@ -43,18 +29,6 @@ slider.addEventListener('change', function(event){
 });
 
 charDisplay.innerHTML = slider.value;
-
-// function charactersNeeded(){
-//     let charNeeded = document.getElementById('charNeeded').value;
-//     if( charNeeded < 8 ){
-//         console.log("ADD ALERT: charNeeded below 8")
-//     } else if( charNeeded > 128){
-//         console.log("ADD ALERT: charNeeded above 128")
-//     } else {
-//         console.log(`Characters needed ${charNeeded}`);
-//     return charNeeded
-//     };
-// };
 
 function generateCharSet(){
     let charSet = "";
@@ -125,7 +99,6 @@ function copyPassword(){
     displayAlert();
 };
 
-//! tie button that is triggering the alert to the function
 function displayAlert(){
     $(".alert").show();
     setTimeout( () => $(".alert").hide(), 3000)
