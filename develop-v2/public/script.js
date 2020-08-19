@@ -118,9 +118,7 @@ function handleClick(){
 };
 
 function copyPassword(){
-    console.log("copying password")
     const copyText = document.getElementById('password-copy');
-    console.log(`Copying: ${copyText.value}`)
     copyText.select();
     copyText.setSelectionRange(0,9999);
     document.execCommand("copy");
